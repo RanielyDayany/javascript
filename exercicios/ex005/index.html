@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            font:18pt arial;
+            background-color: bisque;
+            color: rgb(96, 60, 15);
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado.</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div class="msg">Clique em mim</div>
+
+    <script>
+        /*Selecionando por marca(tag):
+        var p1 = document.getElementsByTagName('p')[1]
+        p1.style.color = 'green'
+        document.write('Está escrito assim: '+p1.innerText) 
+        Se eu usar innerTextHTML ele vai escrever a frase usando o mesmo estilo que foi usado */
+
+        /*Selecionando por classe:
+        var d = document.getElementsByClassName('msg')[0]*/
+
+        /*Selecionando por nome:
+        var d = document.getElementsByName('msg'[0])*/
+
+        var d = document.querySelector('div.msg')
+        d.style.backgroundColor='orange'
+
+
+    </script>
+    
+</body>
+</html>
