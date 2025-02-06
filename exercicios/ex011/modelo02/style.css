@@ -8,7 +8,11 @@ header{
     margin: auto;
     color: white;
     text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.112) 3px 3px 8px;
 
+}
+div#res {
+    line-height: 50px;
 }
 
 section{
@@ -25,5 +29,7 @@ footer{
     color: white;
     text-align: center;
     font-style: italic;
+    padding-top: 20px;
+    text-shadow: rgba(0, 0, 0, 0.112) 2px 2px 8px;
 
 }
