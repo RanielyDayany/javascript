@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+    <style>
+        body{
+            font:normal 16pt arial;
+        }
+        input{
+            font:normal 12pt arial;
+            width: 150pt;
+            height: 50pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e Depois</h1>
+    <p><input type="button" value="Antecessor e Sucessor" onclick="aEd()"></p>
+
+    <script>
+        function aEd(){
+            let num = prompt('Digite um número inteiro qualquer')
+            let res1 = Number(num) - 1
+            let res2 = Number(num) + 1
+            alert(`Antes de ${num} temos o número ${res1}.` + "\n" + `Depois de ${num} temos o número ${res2}.`)
+        }
+    </script>
+    
+</body>
+</html>
