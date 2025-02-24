@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Desconto</title>
+    <style>
+        body{
+            font: normal 14pt arial;
+        }
+        input{
+            width: 180px;
+            height: 80px;
+            font: normal 14pt arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Calcular Desconto</h1>
+    <p><input type="button" value="Desconto de 10%" onclick="calcular()"></p>
+    <div id="res">Clique no botão acima pra iniciar.</div>
+    <script>
+       function calcular(){
+        let produto = prompt('Qual é o produto que você está comprando?')
+        let preco = Number.parseFloat(prompt(`Qual é o preço de ${produto}`))
+        desconto = preco - (preco * 0.9)
+        valorfinal = preco * 0.9
+        res.innerHTML = (`<h1>Calculando desconto de 10% para ${produto}</h1>`)
+        res.innerHTML +=(`<p>O preço original era ${preco.toLocaleString("pt-BR",{style:'currency',currency:'BRL'})}</p>`)
+            res.innerHTML +=(`<p>Você acaba de ganhar ${desconto.toLocaleString("pt-BR",{style:'currency',currency:'BRL'})} de deconto (-10%)</p>`)
+            res.innerHTML += (`<p>No fim,você vai pagar ${valorfinal.toLocaleString("pt-BR",{style:'currency',currency:'BRL'})} no produto ${produto}.</p>`)
+       } 
+
+    </script>
+</body>
+</html>
