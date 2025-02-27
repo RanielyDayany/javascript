@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajustar salário</title>
+    <style>
+        body{
+            font: normal 12pt arial;
+            font-size: 1.2em;
+        }
+        input{
+            width: 150px;
+            height: 60px;
+            font-size: 12pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reajuste Salarial</h1>
+    <p><input type="button" value="Reajustar Salário" onclick="reajustar()"></p>
+    <div id="res">Clique no botão acima para iniciar.</div>
+
+    <script>
+        function reajustar(){
+            let nome = prompt('Qual o nome do funcionário?')
+            let sal = Number.parseFloat(prompt(`Qual o slário de ${nome}?`))
+            let p = Number.parseFloat(prompt(`O salário de ${nome} vai ser reajustado em qual porcentagem?`))
+            let reajuste = sal * (p/100) 
+            let nsal= sal + reajuste
+            res.innerHTML = (`<h1>${nome} recebeu um aumento salarial!</h1>`)
+            res.innerHTML += (`<p>O salário era ${sal.toLocaleString("pt-BR",{style:'currency',currency:'BRL'})}</p>`)
+            res.innerHTML +=(`Com um aumento de ${p}%,o salário vai aumentar ${reajuste.toLocaleString("pt-BR",{style:'currency',currency:'BRL'})}.`)
+            res.innerHTML +=(`<p>E a partir daí,${nome} vai passar a ganhar ${nsal.toLocaleString("pt-br",{style:'currency',currency:'BRL'})}.</p>`)
+
+            
+        }
+    </script>
+    
+</body>
+</html>
